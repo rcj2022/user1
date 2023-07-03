@@ -1,70 +1,38 @@
+
+<?php
+
+if(isset($_POST['submit']))
+{
+
+include_once('config.php');
+
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$fone = $_POST['fone'];
+$genero = $_POST['genero'];
+$data = $_POST['data'];
+$cidade = $_POST['cidade'];
+$estado = $_POST['estado'];
+$end = $_POST['end'];
+
+$result = mysqli_query($con,"INSERT INTO usuario(nome, email, fone, sexo, nasc, cidade, estado, end) VALUES('$nome', '$email', '$fone', '$genero', '$data', '$cidade', '$estado', '$end')");
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Formulário | RCJ</title>
 </head>
 
-<style>
-    body{
-        background-image: linear-gradient(to right,rgb(20,147,220),rgb(17,54,71));
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .box{
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        background-color: rgb(0, 0, 0, 0.8);
-        padding: 15px;
-        border-radius: 15px;
-        width:25%;
-        
-    }
-    .inputBox{
-        position: relative;
-    }
-    .inputUser{
-        background: none;
-        border: none;
-        border-bottom: 1px solid white;
-        outline: none;
-        color: white;
-        font-size: 15px;
-        width: 100%;
-        letter-spacing: 2px;
-    }
-
-    fieldset{
-        border: 3px solid dodgerblue;
-        
-    }
-    legend{
-        border: 1px solid dodgerblue;
-        padding: 10px;
-        text-align: center;
-        background-color: dodgerblue;
-        border-radius: 5px;
-    }
-    .labelInput{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        pointer-events: none;
-        transition: 0.5s;
-    }
-    .inputUser:focus ~ .labelInput,.inputUser:valid ~ .labelInput{
-        top: -20px;
-        font-size: 12px;
-        color: dodgerblue;
-    }
-</style>
 <body>
+<a href="home.php">Voltar</a>
     <div class="box">
-        <form action="">
+        <form action="cad.php" method ="POST">
 
             <fieldset>
                 <legend><b>Formulário de clientes</b></legend>
@@ -72,6 +40,12 @@
                 <div class="inputBox">
                     <input type="text" class="inputUser" name="nome" id="nome" required>
                     <label for="nome" class="labelInput">Nome completo</label>
+
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" class="inputUser" name="senha" id="senha" required>
+                    <label for="senha" class="labelInput">Criar senha</label>
 
                 </div>
                 <br><br>
@@ -86,7 +60,7 @@
                     <label for="fone" class="labelInput">Telefone</label>
 
                 </div>
-                <br><br>
+               
 
                 <p>Sexo:</p>
                 <input type="radio" name="genero" id="feminino" value="feminino" required>
@@ -101,6 +75,7 @@
                 <br><br>
                 <div class="inputBox">
                     <label for="data"><b>Data de Nascimento:</b></label>
+                    <br><br>
                     <input type="date" class="inputUser" name="data" id="data" required>   
                 </div>
                 <br><br>
@@ -120,7 +95,7 @@
                     <label for="text" class="labelInput">Endereço</label>   
                 </div>
                 <br><br>
-            <input type="button" value="Enviar" name="submit">
+            <input type="submit" value="Enviar" name="submit" id="submit">
             </fieldset>
 
 
