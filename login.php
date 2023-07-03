@@ -14,9 +14,9 @@
 
         
         <h1>Login</h1>
-        <input type="text" name="email" id="email" placeholder="Digite seu email...">
+        <input type="text" name="email" id="email" placeholder="Digite seu email..." required>
         <br><br>
-        <input type="password" name="senha" id="senha" placeholder="Digite sua senha...">
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." required>
         <br><br>
         <input type="submit" name="submit" value="Enviar" class="inputSubmit">
     
