@@ -17,7 +17,7 @@ $estado = $_POST['estado'];
 $end = $_POST['end'];
 
 $result = mysqli_query($con,"INSERT INTO usuario(nome, senha, email, fone, sexo, nasc, cidade, estado, end) VALUES('$nome','$senha', '$email', '$fone', '$genero', '$data', '$cidade', '$estado', '$end')");
-
+header('Location: login.php');
 }
 
 ?>
