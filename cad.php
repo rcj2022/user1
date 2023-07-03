@@ -7,6 +7,7 @@ if(isset($_POST['submit']))
 include_once('config.php');
 
 $nome = $_POST['nome'];
+$senha = $_POST['senha'];
 $email = $_POST['email'];
 $fone = $_POST['fone'];
 $genero = $_POST['genero'];
@@ -15,7 +16,7 @@ $cidade = $_POST['cidade'];
 $estado = $_POST['estado'];
 $end = $_POST['end'];
 
-$result = mysqli_query($con,"INSERT INTO usuario(nome, email, fone, sexo, nasc, cidade, estado, end) VALUES('$nome', '$email', '$fone', '$genero', '$data', '$cidade', '$estado', '$end')");
+$result = mysqli_query($con,"INSERT INTO usuario(nome, senha, email, fone, sexo, nasc, cidade, estado, end) VALUES('$nome','$senha', '$email', '$fone', '$genero', '$data', '$cidade', '$estado', '$end')");
 
 }
 
