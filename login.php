@@ -7,7 +7,8 @@
     <title>Tela de Login</title>
 
 </head>
-<a href="home.php">Voltar</a>
+
+
 <body>
     <div class="tela">
         <form action="testlogin.php" method="POST">
@@ -19,7 +20,7 @@
         <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." required>
         <br><br>
         <input type="submit" name="submit" value="Enviar" class="inputSubmit">
-    
+        <a href="home.php"><i class="bi bi-arrow-return-left">voltar</i></a>
     </form>
     </div>
 </body>
