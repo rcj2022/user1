@@ -10,13 +10,13 @@ $nome = $_POST['nome'];
 $senha = $_POST['senha'];
 $email = $_POST['email'];
 $fone = $_POST['fone'];
-$genero = $_POST['genero'];
-$data = $_POST['data'];
+$sexo = $_POST['sexo'];
+$data = $_POST['nasc'];
 $cidade = $_POST['cidade'];
 $estado = $_POST['estado'];
-$end = $_POST['end'];
+$end = $_POST['endereco'];
 
-$result = mysqli_query($con,"INSERT INTO usuario(nome, senha, email, fone, sexo, nasc, cidade, estado, end) VALUES('$nome','$senha', '$email', '$fone', '$genero', '$data', '$cidade', '$estado', '$end')");
+$result = mysqli_query($con,"INSERT INTO usuario(nome, senha, email, fone, sexo, nasc, cidade, estado, endereco) VALUES('$nome','$senha', '$email', '$fone', '$sexo', '$data', '$cidade', '$estado', '$end')");
 header('Location: login.php');
 }
 
@@ -31,7 +31,7 @@ header('Location: login.php');
 </head>
 
 <body>
-<a href="home.php">Voltar</a>
+<a href="sistema.php">Voltar</a>
     <div class="box">
         <form action="cad.php" method ="POST">
 
