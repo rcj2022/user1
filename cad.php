@@ -64,20 +64,20 @@ header('Location: login.php');
                
 
                 <p>Sexo:</p>
-                <input type="radio" name="genero" id="feminino" value="feminino" required>
+                <input type="radio" name="sexo" id="feminino" value="feminino" required>
                 <label for="feminino">Feminino</label>
                 <br>
-                <input type="radio" name="genero" id="masculino" value="masculino" required>
+                <input type="radio" name="sexo" id="masculino" value="masculino" required>
                 <label for="masculino">Masculino</label>
                 <br>
-                <input type="radio" name="genero" id="outro" value="outro" required>
+                <input type="radio" name="sexo" id="outro" value="outro" required>
                 <label for="outro">Outro</label>
                 <br>
                 <br><br>
                 <div class="inputBox">
                     <label for="data"><b>Data de Nascimento:</b></label>
                     <br><br>
-                    <input type="date" class="inputUser" name="data" id="data" required>   
+                    <input type="date" class="inputUser" name="nasc" id="nasc" required>   
                 </div>
                 <br><br>
                 <div class="inputBox">
@@ -92,7 +92,7 @@ header('Location: login.php');
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" class="inputUser" name="end" id="end" required>
+                    <input type="text" class="inputUser" name="endereco" id="endereco" required>
                     <label for="text" class="labelInput">Endereço</label>   
                 </div>
                 <br><br>
